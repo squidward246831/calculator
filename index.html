@@ -33,6 +33,7 @@ body{
       input=0
       document.querySelector("#input").innerHTML=input;
     };
+
 document.addEventListener("DOMContentLoaded", function(){
   document.querySelector("#new-task").onsubmit=function(){
     const li= document.createElement("li");
@@ -40,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function(){
     document.querySelector("#tasks").append(li);
     document.querySelector("#task").value='';
     return false;
-  }
-}
+  };
+});
 
 
 
