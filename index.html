@@ -33,6 +33,27 @@ body{
       input=0
       document.querySelector("#input").innerHTML=input;
     };
+document.addEventListener("DOMContentLoaded", function(){
+  document.querySelector("#new-task").onsubmit=function(){
+    const li= document.createElement("li");
+    li.innerHTML=document.querySelector("#task").value;
+    document.querySelector("#tasks").append(li);
+    document.querySelector("task").value=''
+    return false;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
   </script>
 </head> <body> 
   <h1>CALCULATOR</h1><br/>
@@ -48,6 +69,16 @@ body{
   <button onclick="add()">+</button>
   <button onclick="subtract()">-</button>
   <button onclick="reset()">reset</button>
-  
-  </body> 
+<br><br><br><br>
+<h1>tasks</h1>
+<ul id="tasks">
+
+</ul>  
+<form id="new-task">
+<input type="text" name="" id="task">
+<input type="submit">
+</form>  
+
+
+</body> 
   </html>
