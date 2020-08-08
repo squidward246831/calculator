@@ -54,8 +54,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-
-
+function clear(){
+document.querySelector("#tasks").innerHTML="";
+};
 
 
   </script>
@@ -81,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function(){
 <form id="new-task">
 <input type="text" name="" id="task">
 <input type="submit">
-<input type="reset" value="clear">
+<input type="button" value="clear" onclick="clear()">
 </form>  
 
 
