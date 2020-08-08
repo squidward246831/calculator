@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const li= document.createElement("li");
     li.innerHTML=document.querySelector("#task").value;
     document.querySelector("#tasks").append(li);
-    document.querySelector("task").value=''
+    document.querySelector("#task").value='';
     return false;
   }
 }
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function(){
    <form Name="calc"> <table border=2> 
      <tr>
         <td colspan=4><input type=text Name="display"></td> 
-      </tr> <tr> <td><input type=button value="0" OnClick="calc.display.value+='0'"></td> <td><input type=button value="1" OnClick="calc.display.value+='1'"></td> <td><input type=button value="2" OnClick="calc.display.value+='2'"></td> <td><input type=button value="+" OnClick="calc.display.value+='+'"></td> </tr> <tr> <td><input type=button value="3" OnClick="calc.display.value+='3'"></td> <td><input type=button value="4" OnClick="calc.display.value+='4'"></td> <td><input type=button value="5" OnClick="calc.display.value+='5'"></td> <td><input type=button value="-" OnClick="calc.display.value+='-'"></td> </tr> <tr> <td><input type=button value="6" OnClick="calc.display.value+='6'"></td> <td><input type=button value="7" OnClick="calc.display.value+='7'"></td> <td><input type=button value="8" OnClick="calc.display.value+='8'"></td> <td><input type=button value="x" OnClick="calc.display.value+='*'"></td> </tr> <tr> <td><input type=button value="9" OnClick="calc.display.value+='9'"></td> <td><input type=button value="C" OnClick="calc.display.value=''"></td> <td><input type=button value="=" OnClick="calc.display.value=eval(calc.display.value)"></td> <td><input type=button value="/" OnClick="calc.display.value+='/'"></td> </tr> </table> 
+      </tr> <tr> <td><input type=button value="0" OnClick="calc.display.value+='0' "></td> <td><input type=button value="1" OnClick="calc.display.value+='1'"></td> <td><input type=button value="2" OnClick="calc.display.value+='2'"></td> <td><input type=button value="+" OnClick="calc.display.value+='+'"></td> </tr> <tr> <td><input type=button value="3" OnClick="calc.display.value+='3'"></td> <td><input type=button value="4" OnClick="calc.display.value+='4'"></td> <td><input type=button value="5" OnClick="calc.display.value+='5'"></td> <td><input type=button value="-" OnClick="calc.display.value+='-'"></td> </tr> <tr> <td><input type=button value="6" OnClick="calc.display.value+='6'"></td> <td><input type=button value="7" OnClick="calc.display.value+='7'"></td> <td><input type=button value="8" OnClick="calc.display.value+='8'"></td> <td><input type=button value="x" OnClick="calc.display.value+='*'"></td> </tr> <tr> <td><input type=button value="9" OnClick="calc.display.value+='9'"></td> <td><input type=button value="C" OnClick="calc.display.value=''"></td> <td><input type=button value="=" OnClick="calc.display.value=eval(calc.display.value)"></td> <td><input type=button value="/" OnClick="calc.display.value+='/'"></td> </tr> </table> 
     </form> 
     <h3 id="hello">change the color of the website here!</h3>
     <input type="color" name="colorInput"id="colorInput">
