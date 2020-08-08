@@ -21,6 +21,18 @@ body{
         alert(`counter = ${input}`)
       };
     };
+    function subtract(){
+      input--
+      document.querySelector("#input").innerHTML=input;
+
+      if (input % -10 === 0){
+        alert(`counter = ${input}`);
+      };
+    };
+    function reset(){
+      input=0
+      document.querySelector("#input").innerHTML=input;
+    };
   </script>
 </head> <body> 
   <h1>CALCULATOR</h1><br/>
