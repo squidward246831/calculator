@@ -12,6 +12,15 @@ body{
       let color=document.body.querySelector("#colorInput").value;
       document.body.style.backgroundColor=color;
     };
+    let input=0
+    function add() {
+      input++
+      document.querySelector("#input").innerHTML=input;
+
+      if (input % 10 === 0){
+        alert(`counter = ${input}`)
+      };
+    };
   </script>
 </head> <body> 
   <h1>CALCULATOR</h1><br/>
