@@ -59,6 +59,9 @@ document. getElementById("viewport"). setAttribute("content", "width=1024, initi
 function clear(){
 document.querySelector("#tasks").innerHTML="ENTER TASKS"
 };
+function resetColor(){
+  document.body.style.backgroundColor='rgba(9, 157, 255, 0.733)';
+};
 
 
   </script>
@@ -71,7 +74,8 @@ document.querySelector("#tasks").innerHTML="ENTER TASKS"
     </form> 
     <h3 id="hello">change the color of the website here!</h3>
     <input type="color" name="colorInput"id="colorInput">
-    <input type="button" name="" id="colorButton" onclick="colorChange()" value="ENTER" >
+    <input type="button" name="" id="colorButton" onclick="colorChange()" value="CHANGE" >
+    <BUTTon onclick="resetColor()">Reset</BUTTon>
   <h2 id="input">0</h2>
   <button onclick="add()">+</button>
   <button onclick="subtract()">-</button>
