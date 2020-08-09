@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
   body {
-  background-color:rgba(9, 157, 255, 0.733);
+  background-color:rgba(90, 157, 255, 0.733);
 }
 
   </style>
@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function(){
 var list = document.getElementById("#tasks");
 
 
-function myFunction() {
-  var list = document.getElementById("myList");
+function clearButton() {
+  var list = document.getElementById("tasks");
   list.removeChild(list.childNodes[0]);
 };
 
@@ -62,10 +62,7 @@ document.querySelector("#tasks").remove(li);
 function resetColor(){
   document.body.style.backgroundColor='rgba(9, 157, 255, 0.733)';
 };
-function clearButton(){
-  list.removeChild(list.childNodes[0]); 
-  return false;
-};
+
 
   </script>
 </head> <body> 
@@ -98,7 +95,7 @@ function clearButton(){
 
 <p>Click the button to remove the first item from the list.</p>
 
-<button onclick="myFunction()">Try it</button>
+<button onclick="clearButton()">Try it</button>
 
 
 </body> 
