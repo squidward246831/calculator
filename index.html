@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
   body {
-  background-color:rgba(90, 157, 255, 0.733);
+  background-color:rgba(9, 157, 255, 0.733);
 }
 
   </style>
@@ -51,11 +51,10 @@ document.addEventListener("DOMContentLoaded", function(){
 var list = document.getElementById("#tasks");
 
 
-
-
-
-
-
+function myFunction() {
+  var list = document.getElementById("myList");
+  list.removeChild(list.childNodes[0]);
+};
 
 function clearLi(){
 document.querySelector("#tasks").remove(li);
@@ -94,6 +93,12 @@ function clearButton(){
 <input type="submit">
 <input type="button" value="clear" id="cleartasks" onclick="clearButton()">
 </form>  
+<br><br><br>
+<ul id="myList"><li>Coffee</li><li>Tea</li><li>Milk</li></ul>
+
+<p>Click the button to remove the first item from the list.</p>
+
+<button onclick="myFunction()">Try it</button>
 
 
 </body> 
