@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
   body {
-  background-color:rgba(9, 157, 255, 0.733);
+  background-color:rgba(90, 157, 255, 0.733);
 }
 
   </style>
@@ -48,6 +48,8 @@ document.addEventListener("DOMContentLoaded", function(){
     return false;
   };
 });
+var list = document.getElementById("#tasks");
+list.removeChild(list.childNodes[0]); 
 
 
 
