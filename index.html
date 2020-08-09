@@ -62,7 +62,10 @@ document.querySelector("#tasks").remove(li);
 function resetColor(){
   document.body.style.backgroundColor='rgba(9, 157, 255, 0.733)';
 };
-
+function clearButton(){
+  document.body.innerHTML="hiiii";
+  return false;
+};
 
   </script>
 </head> <body> 
@@ -88,7 +91,7 @@ function resetColor(){
 <form id="new-task">
 <input type="text" name="" id="task">
 <input type="submit">
-<button  type="button" onclick="clearLi()">clear</button>
+<input type="submit" value="clear" id="clearButton">
 </form>  
 
 
