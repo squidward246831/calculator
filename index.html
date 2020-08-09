@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
   body {
-  background-color:rgba(90, 157, 255, 0.733);
+  background-color:rgba(11, 46, 97, 0.733);
 }
 
   </style>
@@ -68,10 +68,10 @@ function resetColor(){
   document.body.style.backgroundColor='rgba(9, 157, 255, 0.733)';
 };
 document.addEventListener("DOMContentLoaded", ()=>{
-  setInterval(counter1, 1000)
+  setInterval(counter2, 1000)
 })
 let counter1=0
-function counter1{
+function counter2(){
   counter1++
   document.querySelector("#counter1").innerHTML=counter1;
 };
@@ -101,7 +101,7 @@ function counter1{
 <input type="submit" id="submit">
 <input type="button" value="clear" id="cleartasks" onclick="clearButton()">
 </form>  
-<br> <h1 id="counter1">you have been on the website for ${count1} seconds</h1>
+<br> <h1 id="counter1">you have been on the website for 0 seconds</h1>
 
 </body> 
   </html>
