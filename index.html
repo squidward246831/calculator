@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
   body {
-  background-color:rgba(90, 157, 255, 0.733);
+  background-color:rgba(9, 157, 255, 0.733);
 }
 
   </style>
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function(){
   };
 });
 var list = document.getElementById("#tasks");
-list.removeChild(list.childNodes[0]); 
+
 
 
 
@@ -64,7 +64,7 @@ function resetColor(){
   document.body.style.backgroundColor='rgba(9, 157, 255, 0.733)';
 };
 function clearButton(){
-  document.body.innerHTML="hiiii";
+  list.removeChild(list.childNodes[0]); 
   return false;
 };
 
