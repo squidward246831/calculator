@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
   body {
-  background-color:rgba(9, 157, 255, 0.733);
+  background-color:rgba(90, 157, 255, 0.733);
 }
 
   </style>
@@ -37,14 +37,16 @@
     };
 
 document.addEventListener("DOMContentLoaded", function(){
+  document.querySelector("#submit").disabled=true;
+  document.querySelector("#task").onkeyup=()=>{
+    document.querySelector("#submit").disabled=false;
+  }
   document.querySelector("#new-task").onsubmit=function(){
     const li= document.createElement("li");
     li.innerHTML=document.querySelector("#task").value;
     document.querySelector("#tasks").append(li);
     document.querySelector("#task").value='';
-    if (task===''){
-      return "no task";
-    };
+    document.querySelector("#submit").disabled=true;
     return false;
   };
 });
@@ -87,7 +89,7 @@ function resetColor(){
 </ul>  
 <form id="new-task">
 <input type="text" name="" id="task">
-<input type="submit">
+<input type="submit" id="submit">
 <input type="button" value="clear" id="cleartasks" onclick="clearButton()">
 </form>  
 
