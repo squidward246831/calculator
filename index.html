@@ -57,7 +57,7 @@ document. getElementById("viewport"). setAttribute("content", "width=1024, initi
 
 
 function clear(){
-document.querySelector("#tasks").innerHTML="ENTER TASKS"
+document.body.innerHTML="ENTER TASKS"
 };
 function resetColor(){
   document.body.style.backgroundColor='rgba(9, 157, 255, 0.733)';
@@ -88,7 +88,7 @@ function resetColor(){
 <form id="new-task">
 <input type="text" name="" id="task">
 <input type="submit">
-<button  type="button"onclick="clear()">clear</button>
+<button  type="button" onclick="clear()">clear</button>
 </form>  
 
 
