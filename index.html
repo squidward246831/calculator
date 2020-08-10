@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
   body {
-  background-color:rgba(24, 70, 5, 0.733);
+  background-color:rgba(240, 70, 5, 0.733);
 }
 
   </style>
@@ -82,14 +82,11 @@ if (counter1 % 10 === 1){
   alert("hello");
 }
 });
-var birds = document.getElementById("tasks");
-var i = birds.childNodes.length;
-while (i--)
-  birds.appendChild(birds.childNodes[i]);
+
 
   function sortList() {
   var list, i, switching, b, shouldSwitch;
-  list = document.getElementById("id01");
+  list = document.getElementById("tasks");
   switching = true;
   /* Make a loop that will continue until
   no switching has been done: */
