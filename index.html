@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
   body {
-  background-color:rgba(240, 70, 55, 0.733);
+  background-color:rgba(24, 70, 55, 0.733);
 }
 
   </style>
@@ -40,19 +40,19 @@
     };
 
 document.addEventListener("DOMContentLoaded", function(){
-  document.querySelector("#submit").disabled=true;
+  document.querySelector("#task").disabled=true;
   document.querySelector("#task").onkeyup=()=>{
     if (document.querySelector("#task").value.length>0)
-    document.querySelector("#submit").disabled=false;
+    document.querySelector("#task").disabled=false;
     else 
-      document.querySelector("#submit").disabled=true;
+      document.querySelector("#task").disabled=true;
   };
   document.querySelector("#new-task").onsubmit=function(){
     const li= document.createElement("li");
     li.innerHTML=document.querySelector("#task").value;
     document.querySelector("#tasks").append(li);
     document.querySelector("#task").value='';
-    document.querySelector("#submit").disabled=true;
+    document.querySelector("#task").disabled=true;
     return false;
   };
 });
