@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
   body {
-  background-color:rgba(24, 70, 5, 0.733);
+  background-color:rgba(240, 70, 5, 0.733);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -164,6 +164,17 @@ span.psw {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
   </style>
   <script>
     function colorChange(){
@@ -288,11 +299,14 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+function myFunction(x) {
+  x.classList.toggle("change");
+}
   </script>
 </head> <body> 
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="index.html">About</a>
+    <a href="">"About</a>
     <a href="https://github.com">Services</a>
     <a href="#">Clients</a>
     <a href="#">Contact</a>
