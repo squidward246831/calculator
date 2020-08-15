@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
-  background-color:rgba(24,70, 5, 0.733);
+  background-color:rgba(240,70, 5, 0.733);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -629,6 +629,14 @@ if (window.innerHeight + window.scrollY >= document.body.offsetHeight);{
 
 
 }
+function myFunctioncheckout() {
+  var x = document.getElementsByClassName("col-50");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
   </script>
 </head> 
 <body> 
@@ -709,9 +717,6 @@ if (window.innerHeight + window.scrollY >= document.body.offsetHeight);{
     </div>
   </form>
 </div>
-
-<h2>Responsive Checkout Form</h2>
-<p>Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p>
 <div class="row">
   <div class="col-75">
     <div class="container">
@@ -740,7 +745,7 @@ if (window.innerHeight + window.scrollY >= document.body.offsetHeight);{
               </div>
             </div>
           </div>
-
+<button onclick="myfunctioncheckout()">checkout</button>
           <div class="col-50">
             <h3>Payment</h3>
             <label for="fname">Accepted Cards</label>
