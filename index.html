@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
-  background-color:rgba(240,70, 5, 0.733);
+  background-color:rgba(24,70, 5, 0.733);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -464,6 +464,9 @@ input:checked + .slider:before {
   margin: 50px auto 0 auto;
   width: 80%;
 }
+.demo{
+  text-align:right;
+}
   </style>
   <script>
     function colorChange(){
@@ -637,10 +640,14 @@ function myFunctioncheckout() {
     x.style.display = "none";
   }
 }
+document.addEventListener("DOMContentLoaded", ()=>{
+  var x = "Is the browser online? " + navigator.onLine;
+  document.getElementById("demo").innerHTML = x;
+})
   </script>
 </head> 
 <body> 
-
+<p id="demo"></p>
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="about.html">"About</a>
