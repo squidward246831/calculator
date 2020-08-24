@@ -472,6 +472,14 @@ input:checked + .slider:before {
   padding: 5%;
   margin: auto;
 }
+.mystyle {
+  width: 100%;
+  padding: 25px;
+  background-color: coral;
+  color: white;
+  font-size: 25px;
+  box-sizing: border-box;
+}
   </style>
   <script>
     function colorChange(){
@@ -676,6 +684,11 @@ know = {
                     document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
                 }
             } 
+          document.addEventListener("DOMContentLoaded", ()=>{
+            var element = document.getElementById("chatbox");
+   element.classList.add("mystyle");
+}
+          })
   </script>
 </head> 
 <body> 
