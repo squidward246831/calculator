@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
-  background-color:rgba(65, 196, 93, 0.719);
+  background-color:rgba(6, 196, 93, 0.719);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -665,10 +665,8 @@ know = {
 "hey":"--Chatbot--  hi!",
 "Do you get smarter?":"--Chatbot--  I try to, and would apprieciate it if you helped to do that!",
 "I hate you":"--Chatbot--  I am sorry, what can i do to make it better?",
+"do something":"Hows That?",
 
-if (know = "do something"){
-document.body.style.backgroundColor="orange";
-}
             };
             function talk() {
                 var user = document.getElementById("userBox").value;
@@ -685,7 +683,9 @@ document.body.style.backgroundColor="orange";
    element.classList.remove("chatbox");
 }
           )
-          
+          if (know = "do something"){
+document.body.style.backgroundColor="orange";
+}
   </script>
 </head> 
 <body> 
