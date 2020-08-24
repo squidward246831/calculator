@@ -649,12 +649,15 @@ for (i234 = 0; i234 < online.length; i234++) {
   text += online[i] + "<br>";
 }
 know = {
-                "hello" : "--Chatbot--  hi!",
+                "hello", "hey" : "--Chatbot--  hi!",
                 "how are you?" : " --Chatbot--  good, what about you?",
                 "ok" : "--Chatbot--  :)",
               "hi" : "--Chatbot--  hello!",
                 "can you help me?":"--Chatbot--  I hope to!",
-                "i am good":"--Chatbot--  Thats Awesome!"
+                "I am good":"--Chatbot--  Thats Awesome!"
+                "are you a robot?":"--Chatbot--  Yes I am a robot, but I’m a good one. Let me prove it. How can I help you?”
+              "good morning":"--Chatbot--  Good Morning, Hope you are having an awesome day!"
+            
             };
             function talk() {
                 var user = document.getElementById("userBox").value;
