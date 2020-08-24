@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
-  background-color:rgba(24,70, 5, 0.733);
+  background-color:rgba(240,70, 5, 0.733);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -467,6 +467,11 @@ input:checked + .slider:before {
 .demo{
   text-align:right;
 }
+#chatbox{
+  background-color: white;
+  padding: 5%;
+  margin: auto;
+}
   </style>
   <script>
     function colorChange(){
@@ -658,8 +663,8 @@ know = {
                 "are you a robot?":"--Chatbot--  Yes I am a robot, but I’m a good one. Let me prove it. How can I help you?",
               "good morning":"--Chatbot--  Good Morning, Hope you are having an awesome day!",
 "hey":"--Chatbot--  hi!",
-"Do you get smarter?":"--Chatbot--  I try to, and would apprieciate it if you helped to do that!"
-
+"Do you get smarter?":"--Chatbot--  I try to, and would apprieciate it if you helped to do that!",
+"I hate you":"--Chatbot--  I am sorry, what can i do to make it better?"
             };
             function talk() {
                 var user = document.getElementById("userBox").value;
@@ -821,6 +826,8 @@ Enable tracking on/off
     </div>
   </form>
 </div>
+<div id="chatbox">
 <p id="chatLog">- - C H A T - -<br></p>
         <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+</div>
   </html>
