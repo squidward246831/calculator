@@ -665,7 +665,7 @@ know = {
 "hey":"--Chatbot--  hi!",
 "Do you get smarter?":"--Chatbot--  I try to, and would apprieciate it if you helped to do that!",
 "I hate you":"--Chatbot--  I am sorry, what can i do to make it better?",
-"do something":"Hows That?",
+"do something":"Hows That?"
 
             };
             function talk() {
@@ -681,11 +681,11 @@ know = {
           document.addEventListener("DOMContentLoaded", ()=>{
             var element = document.getElementById("chatbox");
    element.classList.remove("chatbox");
-}
-          )
-          if (know = "do something"){
-document.body.style.backgroundColor="orange";
-}
+          });
+          function addchatbox(){
+            var element = document.getElementById("chatbox");
+element.classList.add("chatbox");
+          }
   </script>
 </head> 
 <body> 
@@ -734,6 +734,11 @@ document.body.style.backgroundColor="orange";
 <br>
 <h1>you have been on this site for:</h1>
 <h1 id="counter1"> 0 </h1><h1>seconds</h1>
+<h2>you have  <p id="days"></p>
+  <p id="hours"></p>
+  <p id="mins"></p>
+  <p id="secs"></p>
+   <p id="end"></p>left</h2>
 <br><br><br><br>
 <!--Modal Checkout Form-->
 
