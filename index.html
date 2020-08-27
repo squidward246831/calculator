@@ -1,12 +1,13 @@
 <!Doctype html>
 
-<html> <head>
-  <title class="navbar-right" id="changed-title">>CALCULATOR</title>
+<html> 
+  <head>
+  <title class="navbar-right" id="changed-title">CALCULATOR</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
-  background-color:rgba(6, 196, 93, 0.719);
+  background-color:rgba(60, 196, 93, 0.719);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -667,6 +668,7 @@ know = {
 "I hate you":"--Chatbot--  I am sorry, what can i do to make it better?",
 "do something":"--Chatbot--  Hows That?",
 "do":"--Chatbot--  What should I do?"
+"bye":"--Chatbot--  Bye! Have a great day!"
             };
             function talk() {
                 var user = document.getElementById("userBox").value;
@@ -686,17 +688,35 @@ know = {
             var element = document.getElementById("chatbox");
 element.classList.add("chatbox");
           }
-          $( document ).ready(function() {
-  var messages = ['Hello Molly','Hello Lolly','Hello Dolly'];
-  var index = -1;
-  var $changedTitle = $('#changed-title');
+          setInterval(showTime, 1000); 
+function showTime() { 
+    let time = new Date(); 
+    let hour = time.getHours(); 
+    let min = time.getMinutes(); 
+    let sec = time.getSeconds(); 
+    am_pm = "AM"; 
   
-  setInterval(function(){
-    //get the message at the next index, modding by the length so it wraps
-    var message = messages[++index % messages.length];
-    $changedTitle.text(message);
-  }, 1000);
-});
+    if (hour > 12) { 
+        hour -= 12; 
+        am_pm = "PM"; 
+    } 
+    if (hour == 0) { 
+        hr = 12; 
+        am_pm = "AM"; 
+    } 
+  
+    hour = hour < 10 ? "0" + hour : hour; 
+    min = min < 10 ? "0" + min : min; 
+    sec = sec < 10 ? "0" + sec : sec; 
+  
+    let currentTime = hour + ":" 
+            + min + ":" + sec + am_pm; 
+  
+    document.getElementById("clock") 
+            .innerHTML = currentTime; 
+} 
+showTime(); 
+
   </script>
 </head> 
 <body> 
@@ -712,7 +732,7 @@ element.classList.add("chatbox");
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
   
 
-
+  <div id="clock">8:10:45</div> 
   
   
 
