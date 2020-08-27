@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
-  background-color:rgba(60, 196, 93, 0.719);
+  background-color:rgba(6, 196, 93, 0.719);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -684,13 +684,18 @@ know = {
                     document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
                 }
             } 
+            document.addEventListener("DOMMContentLoaded", ()=>{
+              var element = document.getElementById("chatbox");
+element.classList.remove("#chatbox");
+            })
           function removechatbox(){
             var element = document.getElementById("chatbox");
-   element.classList.remove("chatbox");
+element.classList.add("#chatbox");
+   
           };
           function addchatbox(){
             var element = document.getElementById("chatbox");
-element.classList.add("chatbox");
+element.classList.add("#chatbox");
           }
           setInterval(showTime, 1000); 
 function showTime() { 
