@@ -473,6 +473,10 @@ input:checked + .slider:before {
   padding: 5%;
   margin: auto;
 }
+#clock{
+  text-align: right;
+  
+}
   </style>
   <script>
     function colorChange(){
@@ -715,6 +719,9 @@ function showTime() {
     document.getElementById("clock") 
             .innerHTML = currentTime; 
 } 
+if (min == 00){
+  alert(`its ${hour}${min}`)
+}
 showTime(); 
 
   </script>
