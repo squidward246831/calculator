@@ -121,12 +121,10 @@ icmp = True
 
 
 syntaxname=""
-seed(1)
-for _ in range(10):
-	value = random()
-seed(2)
-for _ in range(100):
-	value2 = random()
+
+
+def autogen():
+    print("hello")
 
 
 def ar246831():
@@ -168,6 +166,7 @@ def ar246831():
 				syntaxname="ACTIVE"
 				time.sleep(2)
 				os.system ("clear")
+                main()
 		else:
 			print("<--WRONG-->")
 	except KeyboardInterrupt:
@@ -222,10 +221,6 @@ def main():
 			main()
 		elif sinput == "246831":
 			ar246831()
-		elif sinput == "enter":
-			print("welcome")
-			time.sleep(2)
-			enter()
 		elif sinput == "portscan":
 			port_range = int(sin.split(" ")[2])
 			pscans += 1
@@ -401,59 +396,57 @@ def main():
 
 
 
-	try:
-		users = ["root", "guests", "ar246831"]
-		clear = "clear"
-		os.system (clear)
-		username = getpass.getpass ("[+]")
-		if username in users:
-			user = username
-		else:
-			print ("!--WRONG--!")
-			exit()
-	except KeyboardInterrupt:
-		print ("\nCTRL-C Pressed")
+try:
+	users = ["root", "guests", "ar246831"]
+	clear = "clear"
+	os.system (clear)
+	username = getpass.getpass ("[+]")
+	if username in users:
+		user = username
+	else:
+		print ("!--WRONG--!")
 		exit()
-	try:
-		passwords = ["root", "gayman", "Porygon793@"]
-		password = getpass.getpass ("[+]")
-		if user == "root":
-			if password == passwords[0]:
-				print ("[+] Login correct")
-				cookie.write("DIE")
-				time.sleep(0)
-				os.system (clear)
-				try:
-					os.system ("clear")
-					print (banner)
-					main()
-				except KeyboardInterrupt:
-					print ("\n[\033[91mSIN\033[00m] CTRL has been pressed")
-					main()
-			else:
-				print ("[+] Incorrect, exiting")
-				exit()
-		if user == "ar246831":
-			if password == passwords[2]:
-				print ("[+] WELCOME AR")
-				time.sleep(4)
-				os.system (clear)
-				try:
-					os.system ("clear")
-					print (banner)
-					main()
-				except KeyboardInterrupt:
-					print ("\n[\033[91mSIN\033[00m] CTRL has been pressed")
-					main()
-			else:
-				print ("[+] Incorrect, exiting")
-				exit()
-
-
+except KeyboardInterrupt:
+	print ("\nCTRL-C Pressed")
+	exit()
+try:
+	passwords = ["root", "gayman", "Porygon793@"]
+	password = getpass.getpass ("[+]")
+	if user == "root":
+		if password == passwords[0]:
+			print ("[+] Login correct")
+			cookie.write("DIE")
+			time.sleep(0)
+			os.system (clear)
+			try:
+				os.system ("clear")
+				print (banner)
+				main()
+			except KeyboardInterrupt:
+				print ("\n[\033[91mSIN\033[00m] CTRL has been pressed")
+				main()
+		else:
+			print ("[+] Incorrect, exiting")
+			exit()
+	if user == "ar246831":
+		if password == passwords[2]:
+			print ("[+] WELCOME AR")
+			time.sleep(4)
+			os.system (clear)
+			try:
+				os.system ("clear")
+				print (banner)
+				main()
+			except KeyboardInterrupt:
+				print ("\n[\033[91mSIN\033[00m] CTRL has been pressed")
+				main()
+		else:
+			print ("[+] Incorrect, exiting")
+			exit()
 
 def enter():
 	try:
-		users = ["root", "ar246831", value]
+		users = ["root", "ar246831"]
 		clear = "clear"
 		os.system (clear)
 		username = getpass.getpass ("[+]")
