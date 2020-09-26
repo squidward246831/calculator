@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
-  background-color:rgba(56, 96, 80, 0.719);
+  background-color:rgba(56, 96, 8, 0.719);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -468,10 +468,13 @@ input:checked + .slider:before {
 .demo{
   text-align:right;
 }
-#chatbox{
-  background-color: white;
-  padding: 5%;
-  margin: auto;
+.chatbox {
+  width: 100%;
+  padding: 25px;
+  background-color: coral;
+  color: white;
+  font-size: 25px;
+  box-sizing: border-box;
 }
 #clock{
   text-align: right;
@@ -684,18 +687,14 @@ know = {
                     document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
                 }
             } 
-            document.addEventListener("DOMMContentLoaded", ()=>{
-              var chat = document.getElementById("chatbox");
-chat.classList.remove("#chatbox");
-            })
           function removechatbox(){
-            var chat = document.getElementById("chatbox");
-chat.classList.remove("#chatbox");
+            var element = document.getElementById("chatbox");
+   element.classList.add("chatbox");
    
           };
           function addchatbox(){
             var element = document.getElementById("chatbox");
-element.classList.add("#chatbox");
+   element.classList.add("chatbox");
           }
           setInterval(showTime, 1000); 
 function showTime() { 
