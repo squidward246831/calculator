@@ -1,5 +1,8 @@
  #!/usr/bin/env python3
 #-*- coding: utf-8 -*-
+import time
+import calendar
+import ctypes
 import sys
 import socket
 import time
@@ -10,11 +13,14 @@ import time
 import os
 from random import seed
 from random import random
+from alive_progress import alive_bar
+import pygame
+from pygame.locals import *
 sys.stdout.write("\x1b]2;WELCOME TO THE BEGINNING OF THE END ALSO KNOWN AS TBOTE\x07")
 def modifications():
 	print ("Contact Misfortune or Reaper the script is currently under maitnance")
 	on_enter = input("Please press enter to leave")
-	exit()
+	main()	
 #column:65
 ar246831=""
 method = """\033[91m
@@ -29,8 +35,7 @@ method = """\033[91m
 """
 
 info = """
-[\033[91mTBOTE\033[00m] \033[91mMade By reaper, most credit goes to a freind of mines whom taught me python
-Most/Everything im available to do today is mainly for that freind kicking me into it so big thanks.
+[\033[91mTBOTE\033[00m] \033[91m ... The less you know the better...
 Bigest attack: 31.9 gbps
 """
 
@@ -41,12 +46,13 @@ help = """\033[91m
 ║                    \033[00mBASIC COMMANDS\033[91m                    ║
 ║══════════════════════════════════════════════════════║
 ║ \033[00mClear                         \033[91m|\033[00m CLEAR SCREEN\033[91m         ║
-║ \033[00mExit                          \033[91m|\033[00m EXIT PROGRAM\033[91m         ║
+║ \033[00m\q                            \033[91m|\033[00m EXIT PROGRAM\033[91m         ║
 ║ \033[00mMethods                       \033[91m|\033[00m TBOTE METHODS\033[91m        ║
 ║ \033[00mTools                         \033[91m|\033[00m BASIC TOOLS\033[91m          ║
 ║ \033[00mUpdates                       \033[91m|\033[00m DISPLAY UPDATE NOTES\033[91m ║
 ║ \033[00mInfo                          \033[91m|\033[00m DISPLAY TBOTE INFO\033[91m   ║
-╚══════════════════════════════════════════════════════╝\033[00m
+║ \033[00mfeedback                      \033[91m|\033[00m SEND FEEDBACK\033[91m        ║
+╚══════════════════════════════════════════════════════╝
 """
 
 tools = """\033[91m
@@ -99,9 +105,11 @@ altbanner = """
 			    YOU HAVE CLEARED THE CONSOLE 
                    NOW WHAT WILL YOU DO?
 """
-
+yy=2020
+date =calendar.calendar(yy)
 cookie = open(".sinfull_cookie","w+")
-
+aas=1
+assa=1
 fsubs = 0
 tpings = 0
 pscans = 0
@@ -117,16 +125,102 @@ http = True
 udp = True
 syn = True
 icmp = True
+me ="thx"
+timername ="pr"
+def sec():
+	sec = input("how long should the text last?: ")
+ 
+def feedback():
+	while True:
+		amount = input("FEEDBACK:  ")
+		try:
+			val = str(amount)
+			x = amount.count(amount)
+			if amount == "":
+				print("Error processing please try again")
+				x = 1
+				for i in range (1):
+					x = x+1
+					if x >=2:
+						print("we know ur are trying to do that on purpose STOP")
+			else:
+				print("\033[1;00m[\033[91mTHANKS FOR THE FEEDBACK!\033[1;00m]\033[91m\033[00m ")
+				main()
+		except ValueError:
+			print("Amount must be a word, please try again")
+	return val
+# define the countdown func. 
+def countdown(t): 
+	
+	while t: 
+		mins, secs = divmod(t, 60) 
+		timer = '{:02d}:{:02d}'.format(mins, secs) 
+		print(timer, end ="\r") 
+		time.sleep(1) 
+		t -= 1
+	
+	print('PROCESS COMPLETE') 
 
 
+# input time in seconds 
+t = 5
+
+def security(sec):
+	sin = input("\033[1;00m[\033[91mSECURITY\033[1;00m]\033[91m---!>\033[00m ").lower()
+	try:
+			sinput = sin.split(" ")[0]
+			print (altbanner)
+			print ("ACTIVATED")
+			time.sleep(.2)
+			os.system ("clear")
+			print("this program's security is based off a username and password system. If you have any questions please give us your feedback: enter to continue")
+			input()
+			os.system(clear)
+			print("Questions?")
+	except KeyboardInterrupt:
+		print ("\nCTRL-C Pressed")
+		exit()
+
+
+
+def tbote():
+	print("WELCOME TO THE BEGINING OF THE END...")
+	time.sleep(5)
+	os.system("clear")
+	print("THIS PROGRAM RUNS YOUR WORST NIGHTMARES >:)")
+	time.sleep(5)
+	os.system("clear")
+	print("HAVE FUN...")
+	time.sleep(5)
+	os.system("clear")
+	print("IS THERE A REASON YOU ARE RUNNING THIS?...")
+	time.sleep(10)
+	try:
+		users = ["root", "ar246831"]
+		clear = "clear"
+		os.system (clear)
+		username = getpass.getpass ("[+]")
+		if username in users:
+			user = username
+			print("WELCOME...")
+		else:
+			print("<--WRONG-->")
+	except KeyboardInterrupt:
+		print ("\nCTRL-C Pressed")
+		exit()
 
 syntaxname=""
+seed(1)
+for _ in range(10):
+	value = random()
+seed(2)
+for _ in range(100):
+	value2 = random()
 
-
-def autogen():
-    print("hello")
-
-
+def compute():
+    for i in range(15):
+        time.sleep(.1)  # some processing here
+        yield  # insert these
 def ar246831():
 	print("WELCOME TO SPECIAL MODE")
 	sin = input("\033[1;00m[\033[91mSPECIAL MODE\033[1;00m]\033[91m---!>\033[00m ").lower()
@@ -166,7 +260,101 @@ def ar246831():
 				syntaxname="ACTIVE"
 				time.sleep(2)
 				os.system ("clear")
-                main()
+		else:
+			print("<--WRONG-->")
+	except KeyboardInterrupt:
+		print ("\nCTRL-C Pressed")
+		exit()
+def enter():				
+	try:
+		users = ["root", "ar246831",]
+		clear = "clear"
+		os.system (clear)
+		username = getpass.getpass ("[+]")
+		if username in users:
+			user = username
+			print("ACTIVE")
+			timername="10%"
+			time.sleep(.9)
+			os.system(clear)
+			countdown(t)
+			time.sleep(1)
+			os.system(clear)
+			print(f"{timername}")
+			time.sleep(.9)
+			os.system(clear)
+			timername="25%"
+			print(f"{timername}")
+			time.sleep(.9)
+			os.system(clear)
+			timername="50%"
+			print(f"{timername}")
+			time.sleep(.9)
+			os.system(clear)
+			timername="75%"
+			print(f"{timername}")
+			time.sleep(.9)
+			os.system(clear)
+			timername="100%"
+			print(f"{timername}")
+			time.sleep(.9)
+			os.system(clear)
+			with alive_bar(3) as bar:
+				for i in compute():
+					bar()
+			os.system(clear)
+			timername="<--LOADED-->"
+			print(f"{timername}")
+			time.sleep(.9)
+			os.system(clear)
+			print("ACTIVE")
+			time.sleep(.5)
+			os.system(clear)
+			print("ACTIVE")
+			time.sleep(.5)
+			os.system(clear)
+		else:
+			print("<--WRONG-->")
+	except KeyboardInterrupt:
+		print ("\nCTRL-C Pressed")
+		exit()
+def stopwatch():
+	print('Press ENTER to begin. Afterwards, press ENTER to "click" the stopwatch. Press Ctrl-C to quit.')
+	input()                    # press Enter to begin
+	print('Started.')
+	startTime = time.time()    # get the first lap's start time
+	lastTime = startTime
+	lapNum = 1
+	try:
+		while True:
+			totalTime = round(time.time() - startTime, 2)
+			print('Lap #%s: %s' % (lapNum, totalTime), end='')
+			time.sleep(.0000000000000001)
+			input()
+			lapTime = round(time.time() - lastTime, 2)
+			print('Lap #%s: %s (%s)' % (lapNum, totalTime, lapTime), end='')
+			lapNum += 1
+			lastTime = time.time() # reset the last lap time
+	except KeyboardInterrupt:
+       # Handle the Ctrl-C exception to keep its error message from displaying.
+	    print('\nDone.')
+
+
+
+def ar():
+	sin = input("\033[1;00m[\033[91mAR\033[1;00m]\033[91m---!>\033[00m ").lower()
+	try:
+		users = ["root", "ar246831"]
+		clear = "clear"
+		os.system (clear)
+		username = getpass.getpass ("[+]")
+		if username in users:
+			user = username
+			sinput = sin.split(" ")[0]
+			on_yes = input("CONFIRM? : ENTER AND TYPE 'YES' TO CONTINUE")
+			if sinput == "clear":
+				os.system ("clear")
+				print (altbanner)
 		else:
 			print("<--WRONG-->")
 	except KeyboardInterrupt:
@@ -191,7 +379,7 @@ def main():
 
 	while True:
 		sys.stdout.write("\x1b]2;THE BEGINNING OF THE END\x07")
-		sin = input(f"\033[1;00m[\033[91mTHE BEGINING OF THE END...{syntaxname}\033[1;00m]\033[91m---!>\033[00m ").format(syntaxname)
+		sin = input(f"\033[1;00m[\033[91mTHE BEGINING OF THE END...{syntaxname}\033[1;00m]\033[91m---!>\033[00m ")
 		sinput = sin.split(" ")[0]
 		if sinput == "clear":
 			os.system ("clear")
@@ -202,8 +390,10 @@ def main():
 			main()
 		elif sinput == "":
 			main()
-		elif sinput == "exit":
+		elif sinput == "\q":
 			exit()
+		elif sinput == "A":
+			print("!!!!----ABORTED----!!!!")
 		elif sinput == "version":
 			print ("sinful version: "+version+" ")
 		elif sinput == "stats":
@@ -216,11 +406,19 @@ def main():
 		elif sinput == "methods":
 			print (method)
 			main()
+		elif sinput =="active":
+			print(active)
 		elif sinput == "tools":
 			print (tools)
 			main()
 		elif sinput == "246831":
 			ar246831()
+		elif sinput == "enter":
+			print("welcome")
+			time.sleep(2)
+			enter()
+		elif sinput =="tbote":
+			tbote()
 		elif sinput == "portscan":
 			port_range = int(sin.split(" ")[2])
 			pscans += 1
@@ -243,6 +441,24 @@ def main():
 		elif sinput == "info":
 			print (info)
 			main()
+		elif sinput == "date":
+			print(date)
+		elif sinput == "?":
+			modifications()
+		elif sinput == "ar":
+			ar()
+		elif sinput == "security":
+			security(sec)
+		elif sinput == "stopwatch":
+			stopwatch()
+		elif sinput == "feedback":
+			feedback()
+		elif sinput == "thank":
+			print("such manners, thank you!")
+		elif sinput == "yes":
+				print ("YES ENTERED <> PRESS KEY 'A' TO ABORT OR ENTER TO CONTINUE")
+				on_enter = main()
+				on_key = exit()
 		elif sinput == "attacks":
 			print ("\n[\033[91mSIN\033[00m] UPD Running processes: {}".format (uaid))
 			print ("[\033[91mSIN\033[00m] ICMP Running processes: {}".format (iaid))
@@ -306,11 +522,11 @@ def main():
 						print("")
 						main()
 			except ValueError:
-				print ("[\033[91mSIN\033[00m] The command {} requires an argument".format (sinput))
+				print ("[\033[91mTBOTE\033[00m] The command {} requires an argument".format (sinput))
 				main()
 		elif sinput == "udp":
 			if username == "guests":
-				print ("[\033[91mSIN\033[00m] You are not allowed to use this method")
+				print ("[\033[91mTBOTE\033[00m] You are not allowed to use this method")
 				main()
 			else:
 				try:
@@ -391,88 +607,58 @@ def main():
 					udp = True
 					main()
 		else:
-			print ("[\033[91mSIN\033[00m] {} Not a command".format(sinput))
+			print ("[\033[91mTBOTE\033[00m] {} Not a command".format(sinput))
 			main()
 
 
 
 try:
-	users = ["root", "guests", "ar246831"]
-	clear = "clear"
-	os.system (clear)
-	username = getpass.getpass ("[+]")
-	if username in users:
-		user = username
-	else:
-		print ("!--WRONG--!")
-		exit()
-except KeyboardInterrupt:
-	print ("\nCTRL-C Pressed")
-	exit()
-try:
-	passwords = ["root", "gayman", "Porygon793@"]
-	password = getpass.getpass ("[+]")
-	if user == "root":
-		if password == passwords[0]:
-			print ("[+] Login correct")
-			cookie.write("DIE")
-			time.sleep(0)
-			os.system (clear)
-			try:
-				os.system ("clear")
-				print (banner)
-				main()
-			except KeyboardInterrupt:
-				print ("\n[\033[91mSIN\033[00m] CTRL has been pressed")
-				main()
-		else:
-			print ("[+] Incorrect, exiting")
-			exit()
-	if user == "ar246831":
-		if password == passwords[2]:
-			print ("[+] WELCOME AR")
-			time.sleep(4)
-			os.system (clear)
-			try:
-				os.system ("clear")
-				print (banner)
-				main()
-			except KeyboardInterrupt:
-				print ("\n[\033[91mSIN\033[00m] CTRL has been pressed")
-				main()
-		else:
-			print ("[+] Incorrect, exiting")
-			exit()
-
-def enter():
-	try:
-		users = ["root", "ar246831"]
+		users = ["root", "guests", "ar246831"]
 		clear = "clear"
 		os.system (clear)
 		username = getpass.getpass ("[+]")
 		if username in users:
 			user = username
-			sinput = sin.split(" ")[0]
-			if sinput == "clear":
-				os.system ("clear")
-				print (altbanner)
-				ar246831()
-			elif sinput == "special":
-				seed(1)
-				for _ in range(10):
-					value = random()
-				print(value)
-				print ("ACTIVATED")
-				syntaxname="ACTIVE"
-				time.sleep(2)
-				os.system ("clear")
 		else:
-			print("<--WRONG-->")
-	except KeyboardInterrupt:
+			print ("!--WRONG--!")
+			exit()
+except KeyboardInterrupt:
 		print ("\nCTRL-C Pressed")
 		exit()
-
-
+try:
+		passwords = ["root", "gayman", "Porygon793@"]
+		password = getpass.getpass ("[+]")
+		if user == "root":
+			if password == passwords[0]:
+				print ("[+] Login correct")
+				cookie.write("DIE")
+				time.sleep(0)
+				os.system (clear)
+				try:
+					os.system ("clear")
+					print (banner)
+					main()
+				except KeyboardInterrupt:
+					print ("\n[\033[91mSIN\033[00m] EXITING ")
+					main()
+			else:
+				print ("[+] Incorrect, exiting")
+				exit()
+		if user == "ar246831":
+			if password == passwords[2]:
+				print ("[+] WELCOME AR")
+				time.sleep(4)
+				os.system (clear)
+				try:
+					os.system ("clear")
+					print (banner)
+					main()
+				except KeyboardInterrupt:
+					print ("\n[\033[91mTBOTE\033[00m] EXITING")
+					
+			else:
+				print ("[+] Incorrect, exiting")
+				exit()
 
 except KeyboardInterrupt:
-	exit()
+		exit()		
