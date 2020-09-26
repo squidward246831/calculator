@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
-  background-color:rgba(56, 96, 8, 0.719);
+  background-color:rgba(132, 214, 31, 0.719);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -468,6 +468,9 @@ input:checked + .slider:before {
 .demo{
   text-align:right;
 }
+.chatbox2{
+background-color:jghd;
+}
 .chatbox {
   width: 100%;
   padding: 25px;
@@ -482,6 +485,7 @@ input:checked + .slider:before {
 }
   </style>
   <script>
+ var jghd = rgba(132, 214, 31, 0.719);
     function colorChange(){
       let color=document.body.querySelector("#colorInput").value;
       document.body.style.backgroundColor=color;
@@ -689,7 +693,7 @@ know = {
             } 
           function removechatbox(){
             var element = document.getElementById("chatbox");
-   element.classList.add("chatbox");
+   element.classList.add"chatbox2");
    
           };
           function addchatbox(){
