@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
-  background-color:rgba(70, 66, 200, 0.815);
+  background-color:rgba(19, 196, 28, 0.815);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -722,11 +722,14 @@ function myFunctioncheckout() {
     x.style.display = "none";
   }
 }
+document.addEventListener("DOMContentLoaded", ()=>{
+  online();
+})
 function online(){
   var x = "Is the browser online? " + navigator.onLine;
   document.getElementById("demo").innerHTML = x;
 }
-online();
+
 var i234;
 for (i234 = 0; i234 < online.length; i234++) {
   text += online[i] + "<br>";
