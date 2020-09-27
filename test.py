@@ -149,6 +149,8 @@ def feedback():
 		except ValueError:
 			print("Amount must be a word, please try again")
 	return val
+	while False:
+		print("Error processing please try again")
 # define the countdown func. 
 def countdown(t): 
 	
@@ -453,6 +455,8 @@ def main():
 			stopwatch()
 		elif sinput == "feedback":
 			feedback()
+		elif sinput == "^[[A":
+			exit()
 		elif sinput == "thank":
 			print("such manners, thank you!")
 		elif sinput == "yes":
@@ -642,7 +646,7 @@ try:
 					print ("\n[\033[91mSIN\033[00m] EXITING ")
 					main()
 			else:
-				print ("[+] Incorrect, exiting")
+				print ("!--WRONG--!")
 				exit()
 		if user == "ar246831":
 			if password == passwords[2]:

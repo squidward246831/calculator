@@ -529,7 +529,7 @@ document.addEventListener("DOMContentLoaded", function(){
     return false;
   };
 });
-var list = document.getElementById("#tasks");
+
 
 
 function clearButton() {
@@ -691,10 +691,10 @@ know = {
                     document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
                 }
             } 
-          function removechatbox(){
+ var list = document.getElementById("#tasks");
+ function addchatbox(){
             var element = document.getElementById("chatbox");
-   element.classList.add"chatbox2");
-   
+   element.classList.add("chatbox");
           };
           function addchatbox(){
             var element = document.getElementById("chatbox");
@@ -738,7 +738,7 @@ showTime();
     
     var password;
     var pass1="246831";
-    
+   function pass(){
     password=prompt('Please enter your password to view this page!',' ');
     
     if (password==pass1)
@@ -747,7 +747,7 @@ showTime();
        {
         window.location="http://squidward246831/github.com/calculator";
         }
-    
+   };
     //-->
     </SCRIPT>
 </head> 
@@ -910,4 +910,5 @@ Enable tracking on/off
 </div>
 <button onclick="removechatbox()">remove chat box</button>
 <button onclick="addchatbox()">show chat box</button>
+<button onclick="pass()">login</button>
   </html>
