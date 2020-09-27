@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
-  background-color:rgb(200, 168, 108);
+  background-color:rgb(20, 168, 108);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -698,6 +698,8 @@ know = {
           function addchatbox(){
             var element = document.getElementById("chatbox");
    element.classList.add("chatbox");
+   var element2 = document.getElementById("chatlog");
+            document.elemnt2.innerHTML="--CHAT--"
           }
           setInterval(showTime, 1000); 
 function showTime() { 
@@ -903,7 +905,7 @@ Enable tracking on/off
   </form>
 </div>
 <div id="chatbox">
-<p id="chatLog">- - C H A T - -<br></p>
+  <h1 id="chatlog"></h1>
         <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
 </div>
 <button onclick="removechatbox()">remove chat box</button>
