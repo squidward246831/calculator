@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
-  background-color:rgb(16, 143, 69);
+  background-color:rgb(160, 143, 69);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -713,7 +713,7 @@ if (window.innerHeight + window.scrollY >= document.body.offsetHeight);{
 }
 
 
-}
+
 function myFunctioncheckout() {
   var x = document.getElementsByClassName("col-50");
   if (x.style.display === "none") {
@@ -722,9 +722,7 @@ function myFunctioncheckout() {
     x.style.display = "none";
   }
 }
-for (;true;) {
-  online();
-}
+
 function online(){
   var x = "Is the browser online? " + navigator.onLine;
   document.getElementById("demo").innerHTML = x;
@@ -803,7 +801,7 @@ function showTime() {
 } 
 if (min == 00){
   alert(`its ${hour}${min}`);
-}
+}}
 showTime(); 
 
   </script>
@@ -849,7 +847,7 @@ function closeForm() {
 
   <div id="clock">00:11:00</div> 
   <div id="demo"></div>
-  
+
 
   <h1>CALCULATOR</h1><br/>
    <form Name="calc"> <table border=2> 
@@ -993,4 +991,5 @@ Enable tracking on/off
 </div>
 <button onclick="closeForm()">remove chat box</button>
 <button onclick="openForm()">show chat box</button>
-  </html>
+</body>
+</html>
