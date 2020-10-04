@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
-  background-color:rgb(16, 143, 69);
+  background-color:rgb(66, 218, 129);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -725,7 +725,7 @@ function myFunctioncheckout() {
 
 function online(){
   var x = "Is the browser online? " + navigator.onLine;
-  document.getElementById("demo").innerHTML = x;
+  print(x)
 }
 
 var i234;
@@ -804,6 +804,14 @@ if (min == 00){
 }}
 showTime(); 
 
+function onlinebtn() {
+  var x = document.getElementById("onlinetxt");
+  if (x.innerHTML === "Hello") {
+    x.innerHTML = online();
+  } else {
+    x.innerHTML = "Hello";
+  }
+}
   </script>
   <SCRIPT language="JavaScript">
     
@@ -847,7 +855,8 @@ function closeForm() {
 
   <div id="clock">00:11:00</div> 
   <div id="demo"></div>
-<button onclick="online()">online?</button>
+  <button onclick="onlinebtn()">online?</button>
+  <div id="onlinetxt">Hello</div>
 
   <h1>CALCULATOR</h1><br/>
    <form Name="calc"> <table border="2"> 
