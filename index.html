@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
-  background-color:rgb(66, 218, 129);
+  background-color:rgb(84, 240, 23);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Full-width input fields */
@@ -723,11 +723,8 @@ function myFunctioncheckout() {
   }
 }
 
-function online(){
-  var x = "Is the browser online? " + navigator.onLine;
-  print(x)
-}
 
+var xalsk = "Is the browser online? " + navigator.onLine;
 var i234;
 for (i234 = 0; i234 < online.length; i234++) {
   text += online[i] + "<br>";
@@ -807,7 +804,7 @@ showTime();
 function onlinebtn() {
   var x = document.getElementById("onlinetxt");
   if (x.innerHTML === "Hello") {
-    x.innerHTML = online();
+    x.innerHTML = xalsk;
   } else {
     x.innerHTML = "Hello";
   }
