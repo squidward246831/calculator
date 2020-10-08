@@ -732,32 +732,9 @@ for (i234 = 0; i234 < online.length; i234++) {
 function something(){
   document.body.style.backgroundColor='orange';
 }
-know = {
-                "hello" : "--Chatbot--  hi!",
-                "how are you?" : " --Chatbot--  good, what about you?",
-                "ok" : "--Chatbot--  :)",
-              "hi" : "--Chatbot--  hello!",
-                "can you help me?":"--Chatbot--  I hope to!",
-                "i am good":"--Chatbot--  Thats Awesome!",
-                "are you a robot?":"--Chatbot--  Yes I am a robot, but I’m a good one. Let me prove it. How can I help you?",
-              "good morning":"--Chatbot--  Good Morning, Hope you are having an awesome day!",
-"hey":"--Chatbot--  hi!",
-"Do you get smarter?":"--Chatbot--  I try to, and would apprieciate it if you helped to do that!",
-"i hate you":"--Chatbot--  I am sorry, what can i do to make it better?",
-"do something":"UNDER WORK: PLEASE WAIT",
-"do":"--Chatbot--  What should I do?",
-"bye":"--Chatbot--  Bye! Have a great day!"
-            };
-            function talk() {
-                var user = document.getElementById("userBox").value;
-                document.getElementById("userBox").value = "";
-                document.getElementById("chatLog").innerHTML += user+"<br>";
-                if (user in know) {
-                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
-                } else {
-                    document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
-                }
-            } 
+
+
+            
  var list = document.getElementById("#tasks");
  function removechatbox(){
             var element = document.getElementById("chatbox");
@@ -817,13 +794,6 @@ function onlinebtn() {
    function pass(){
     password=prompt('Please enter your password to view this page!',' ');
     
-    if (password==pass1){
-      alert('Password Correct! Click OK to enter!');
-      window.location="https://google.com";
-    else
-        window.location="error.html";
-        
-   };
     //-->
     document.addEventListener("DOMContentLoaded", ()=>{
       closeForm()
@@ -863,6 +833,22 @@ var x = setInterval(function() {
   }
 }, 1000);
     </SCRIPT>
+    <script>
+      know = {
+                "hello" : "hi",
+                "how are you?" : "good",
+                "ok" : ":)"
+            };
+            function talk() {
+                var user = document.getElementById("userBox").value;
+                document.getElementById("userBox").value = "";
+                document.getElementById("chatLog").innerHTML += user+"<br>";
+                if (user in know) 
+                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+                
+            } 
+
+    </script>
 </head> 
 <body> 
 
@@ -891,7 +877,7 @@ var x = setInterval(function() {
     <h3 id="hello">change the color of the website here!</h3>
     <input type="color" name="colorInput"id="colorInput">
     <input type="button" name="" id="colorButton" onclick="colorChange()" value="CHANGE" >
-    <BUTTon onclick="resetColor()">Reset</BUTTon>
+    <button onclick="resetColor()">Reset</button>
   <h2 id="input">0</h2>
   <button onclick="add()">+</button>
   <button onclick="subtract()">-</button>
@@ -1017,8 +1003,8 @@ Enable tracking on/off
 
 
 <div id="myForm">
-  <h4 id="chatLog"></h4>
-  <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+  <p id="chatLog">- - C H A T - -<br></p>
+        <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
 </div>
 <button onclick="closeForm()">remove chat box</button>
 <button onclick="openForm()">show chat box</button>
