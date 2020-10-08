@@ -843,10 +843,12 @@ var x = setInterval(function() {
                 var user = document.getElementById("userBox").value;
                 document.getElementById("userBox").value = "";
                 document.getElementById("chatLog").innerHTML += user+"<br>";
-                if (user in know) 
+                if (user in know){
                     document.getElementById("chatLog").innerHTML += know[user]+"<br>";
-                
-            } 
+                } else{
+                  document.getElementById("chatLog").innerHTML += "i dont understand";
+                }
+            };
 
     </script>
 </head> 
