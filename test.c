@@ -222,8 +222,8 @@ def barchartiscool():
 	ax.text(1, 0.4, current_year, transform=ax.transAxes, size=46, ha='right')
 	fig, ax = plt.subplots(figsize=(15, 8))
 	def draw_barchart(year):
-    	dff = df[df['year'].eq(year)].sort_values(by='value', ascending=True).tail(10)
-    	ax.clear()
+		dff = df[df['year'].eq(year)].sort_values(by='value', ascending=True).tail(10)
+		ax.clear()
     	ax.barh(dff['name'], dff['value'], color=[colors[group_lk[x]] for x in dff['name']])
    		dx = dff['value'].max() / 200
 	 	for i, (value, name) in enumerate(zip(dff['value'], dff['name'])):
